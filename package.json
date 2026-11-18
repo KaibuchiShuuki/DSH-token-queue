@@ -1,0 +1,39 @@
+{
+  "name": "dsh-token-queue",
+  "version": "1.0.0",
+  "description": "谷价待办队列：峰价时段先把指令攒起来，到谷价时段逐条派发到新会话或指定会话开工",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "queue",
+    "schedule",
+    "token"
+  ],
+  "homepage": "https://github.com/KaibuchiShuuki/DSH-token-queue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaibuchiShuuki/DSH-token-queue.git"
+  },
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  }
+}
